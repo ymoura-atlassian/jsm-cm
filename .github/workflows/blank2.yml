@@ -5,14 +5,26 @@ on:
   - create
   - pull_request
 jobs:
-  deployment:
+  deployment1:
     runs-on: ubuntu-latest
     environment: 
-      name: [nadaaver, production]
+      name: production
     steps:
-      - name: Run a one-line script
-        run: echo Hello, world!
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  deployment2:
+    runs-on: ubuntu-latest
+    environment: 
+      name: nadaaver
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+  deployment3:
+    runs-on: ubuntu-latest
+    environment: 
+      name: staging
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
