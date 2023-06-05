@@ -8,7 +8,7 @@ jobs:
   deployment1:
     runs-on: ubuntu-latest
     environment: 
-      name: production
+      name: prod-west
     steps:
       - name: Run a multi-line script
         run: |
@@ -17,14 +17,14 @@ jobs:
   deployment2:
     runs-on: ubuntu-latest
     environment: 
-      name: nadaaver
+      name: trunk
     steps:
       - name: Run a one-line script
         run: echo Hello, world!
   deployment3:
     runs-on: ubuntu-latest
     environment: 
-      name: staging
+      name: model-east
     steps:
       - name: Run a one-line script
         run: echo Hello, world!
